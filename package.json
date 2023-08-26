@@ -1,0 +1,16 @@
+{
+  "name": "playwright-pageobject-component-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "allure-playwright": "^2.6.0",
+    "playwright": "^1.37.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.37.1"
+  }
+}
