@@ -1,13 +1,12 @@
-import { test, expect } from '@playwright/test';
+import { searchTest as test } from './tests';
 
-test.beforeEach(async ({ page }) => {
-    await page.goto("https://demo.playwright.dev/todomvc/#/")
+test.beforeEach(async ({ todoPage }) => {
+    await todoPage.visit("https://demo.playwright.dev/todomvc/#/");
 })
 
 test.describe("Test todo", () => {
-    test('create todo', async ({ page }) => {
-        const todoHeader = page.getByRole('heading', { name: "todos" });
-        console.log("test!!!!")
-        await expect(todoHeader).toBeVisible();
+    test('create todo', async ({ todoPage }) => {
+        await todoPage.titleHaveText("todo");
+        await todoPage.titleToBeVisible();
     })
 })
